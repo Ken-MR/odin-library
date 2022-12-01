@@ -26,7 +26,10 @@
             </div>
             <div class="data">
                 <label for="status">Status</label>
-                <input type="select" id="status" name="status">
+                <select name="status" id="status">
+                    <option value="read">Read</option>
+                    <option value="unread">Unread</option>
+                </select>
             </div>
             <div class="data">
                 <input type="submit" id="submit" name="submit" value="Submit">
@@ -42,6 +45,37 @@
             <button>Delete All</button>
         </div>
     </div>
-    <div class="library-list">Book List</div>
+    <div class="library-list">
+        <table style="width: 100%">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Status</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <td>The Lord of the Rings</td>
+                <td>J R R Tolkien</td>
+                <td style="text-align: center">1008</td>
+                <td style="text-align: center"><button>Read</button></td>
+                <td style="text-align: center"><button>Delete</button></td>
+            </tr>
+            <tr>
+                <td>A Game of Thrones</td>
+                <td>George R R Martin</td>
+                <td style="text-align: center">807</td>
+                <td style="text-align: center"><button>Read</button></td>
+                <td style="text-align: center"><button>Delete</button></td>
+            </tr>
+            <tr>
+                <td>Leviathan Wakes</td>
+                <td>James S A Corey</td>
+                <td style="text-align: center">561</td>
+                <td style="text-align: center"><button>Read</button></td>
+                <td style="text-align: center"><button>Delete</button></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

@@ -59,3 +59,12 @@ form {
     grid-row: 4;
     border: 1px solid red;
 }
+
+table, th, td {
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 20px;
+}
