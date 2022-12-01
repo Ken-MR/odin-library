@@ -5,12 +5,15 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    border: 5px solid silver;
 }
 
 .header {
     grid-row: 1;
     border: 1px solid red;
 }
+
+
 
 .entry-form {
     grid-row: 2;
@@ -28,7 +31,7 @@ form {
     justify-content: center;
     align-items: center;
     border: 2px solid black;
-    
+
 }
 
 
@@ -37,7 +40,20 @@ form {
 .book-log {
     grid-row: 3;
     border: 1px solid red;
+    display: flex;
+    align-items: center;
 }
+
+.book-log > div {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+    height: 100px;
+    align-items: center;
+}
+
+
 
 .library-list {
     grid-row: 4;
