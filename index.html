@@ -10,7 +10,30 @@
 </head>
 <body>
     <div class="header">Library</div>
-    <div class="entry-form">Book Entry</div>
+    <div class="entry-form">
+        <form action="post">
+            <div class="data">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title">                
+            </div>
+            <div class="data">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author">
+            </div>
+            <div class="data">
+                <label for="pages">Pages</label>
+                <input type="text" id="pages" name="pages">
+            </div>
+            <div class="data">
+                <label for="status">Status</label>
+                <input type="select" id="status" name="status">
+            </div>
+            <div class="data">
+                <input type="submit" id="submit" name="submit" value="Submit">
+            </div>
+            <div class="data"></div>
+        </form>
+    </div>
     <div class="book-log">Book Tracking</div>
     <div class="library-list">Book List</div>
 </body>

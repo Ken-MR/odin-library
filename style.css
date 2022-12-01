@@ -17,6 +17,23 @@ body {
     border: 1px solid red;
 }
 
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    
+}
+
+
+
+
 .book-log {
     grid-row: 3;
     border: 1px solid red;
