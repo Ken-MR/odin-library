@@ -1,0 +1,28 @@
+body {
+    width: 1000px;
+    display: grid;
+    grid-template-rows: 50px 200px 100px auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    grid-row: 1;
+    border: 1px solid red;
+}
+
+.entry-form {
+    grid-row: 2;
+    border: 1px solid red;
+}
+
+.book-log {
+    grid-row: 3;
+    border: 1px solid red;
+}
+
+.library-list {
+    grid-row: 4;
+    border: 1px solid red;
+}
