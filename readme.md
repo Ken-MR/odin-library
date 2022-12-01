@@ -1,0 +1,1 @@
+This project simulates a library catalogue and filing system. It demonstrates basic proficiency with objects, constructors, and other related properties of Javascript.
