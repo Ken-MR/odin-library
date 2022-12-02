@@ -57,7 +57,7 @@ form {
 
 
 
-.library-list {
+#library-list {
     grid-row: 4;
     border: 1px solid black;
 }
