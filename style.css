@@ -10,14 +10,14 @@ body {
 
 .header {
     grid-row: 1;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 
 
 .entry-form {
     grid-row: 2;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 form {
@@ -39,7 +39,7 @@ form {
 
 .book-log {
     grid-row: 3;
-    border: 1px solid red;
+    border: 1px solid black;
     display: flex;
     align-items: center;
 }
@@ -48,16 +48,18 @@ form {
     flex-basis: 25%;
     display: flex;
     justify-content: center;
-    border: 1px solid red;
+    border: 1px solid black;
     height: 100px;
     align-items: center;
 }
 
 
 
+
+
 .library-list {
     grid-row: 4;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 table, th, td {
