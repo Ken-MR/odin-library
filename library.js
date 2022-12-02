@@ -37,8 +37,8 @@ function addBookToLibrary() {
     cell1.innerHTML = `${title.value}`;
     cell2.innerHTML = `${author.value}`;
     cell3.innerHTML = `${pages.value}`;
-    cell4.innerHTML = `${readStatus.value}`;
-    cell5.innerHTML = `Delete`;
+    cell4.innerHTML = `<button>${readStatus.value}</button>`;
+    cell5.innerHTML = `<button>Delete</button>`;
 
     cell3.setAttribute('style', 'text-align: center');
     cell4.setAttribute('style', 'text-align: center');
