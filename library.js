@@ -46,8 +46,8 @@ function addBookToLibrary() {
 
 }
 
-myLibrary.push(new Book('The Lord of the Rings', 'J R R Tolkien', 1008, 'Read'));
+/*myLibrary.push(new Book('The Lord of the Rings', 'J R R Tolkien', 1008, 'Read'));
 myLibrary.push(new Book('A Game of Thrones', 'George R R Martin', 807, 'Read'));
-myLibrary.push(new Book('Leviathan Wakes', 'James S A Corey', 561, 'Read'));
+myLibrary.push(new Book('Leviathan Wakes', 'James S A Corey', 561, 'Read'));*/
 
 console.log(myLibrary);
