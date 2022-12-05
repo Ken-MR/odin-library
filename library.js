@@ -48,11 +48,14 @@ function addBookToLibrary() {
 }
 
 function deleteBookFromLibrary(id) {
-    
     let table = id.parentNode.parentNode.parentNode;
     let row = id.parentNode.parentNode.rowIndex;
-
+    console.log(row);
     table.deleteRow(row);
+
+    myLibrary.splice((row-1), 1);
+    myLibrary.forEach(e => e.id = myLibrary.indexOf(e));
+    console.log(myLibrary);
 }
 
 /*myLibrary.push(new Book('The Lord of the Rings', 'J R R Tolkien', 1008, 'Read'));
