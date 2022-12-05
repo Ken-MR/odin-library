@@ -8,6 +8,7 @@ function Book(title, author, pages, readStatus) {
     this.author = author;
     this.pages = pages;
     this.readStatus = readStatus;
+    this.id = myLibrary.length;
 
     this.info = function() {
         let read;
@@ -38,7 +39,7 @@ function addBookToLibrary() {
     cell2.innerHTML = `${author.value}`;
     cell3.innerHTML = `${pages.value}`;
     cell4.innerHTML = `<button>${readStatus.value}</button>`;
-    cell5.innerHTML = `<button>Delete</button>`;
+    cell5.innerHTML = `<button onclick=deleteBookFromLibrary(this)>Delete</button>`;
 
     cell3.setAttribute('style', 'text-align: center');
     cell4.setAttribute('style', 'text-align: center');
@@ -46,8 +47,14 @@ function addBookToLibrary() {
 
 }
 
+function deleteBookFromLibrary(id) {
+    
+    let table = id.parentNode.parentNode.parentNode;
+    let row = id.parentNode.parentNode.rowIndex;
+
+    table.deleteRow(row);
+}
+
 /*myLibrary.push(new Book('The Lord of the Rings', 'J R R Tolkien', 1008, 'Read'));
 myLibrary.push(new Book('A Game of Thrones', 'George R R Martin', 807, 'Read'));
 myLibrary.push(new Book('Leviathan Wakes', 'James S A Corey', 561, 'Read'));*/
-
-console.log(myLibrary);

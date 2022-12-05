@@ -11,6 +11,12 @@ body {
 .header {
     grid-row: 1;
     border: 1px solid black;
+    text-align: center;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
 }
 
 
