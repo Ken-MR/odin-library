@@ -83,11 +83,16 @@ function toggleStatus (id) {
     if (readStatus === 'Read') {
         myLibrary[index - 1].readStatus = 'Unread';
         id.innerHTML = 'Unread';
+        unreadBooks++;
+        readBooks--;
     }
     else {
         myLibrary[index - 1].readStatus = 'Read';
         id.innerHTML = 'Read';
+        unreadBooks--;
+        readBooks++;
     }
+    updateTracking();
 }
 
 function tracking (status, erase = undefined) {
