@@ -53,11 +53,16 @@ function deleteBookFromLibrary(id) {
     console.log(row);
     table.deleteRow(row);
 
-    myLibrary.splice((row-1), 1);
+    myLibrary.splice(row-1, 1);
     myLibrary.forEach(e => e.id = myLibrary.indexOf(e));
     console.log(myLibrary);
 }
 
-/*myLibrary.push(new Book('The Lord of the Rings', 'J R R Tolkien', 1008, 'Read'));
-myLibrary.push(new Book('A Game of Thrones', 'George R R Martin', 807, 'Read'));
-myLibrary.push(new Book('Leviathan Wakes', 'James S A Corey', 561, 'Read'));*/
+function deleteLibrary () {
+    let table = document.getElementById('list');
+    let rowCount = table.rows.length;
+    for (let i = rowCount-1; i > 0; i--) {
+        table.deleteRow(i);
+    }
+    myLibrary = [];
+}
