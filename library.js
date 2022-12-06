@@ -38,7 +38,7 @@ function addBookToLibrary() {
     cell1.innerHTML = `${title.value}`;
     cell2.innerHTML = `${author.value}`;
     cell3.innerHTML = `${pages.value}`;
-    cell4.innerHTML = `<button>${readStatus.value}</button>`;
+    cell4.innerHTML = `<button onclick=toggleStatus(this)>${readStatus.value}</button>`;
     cell5.innerHTML = `<button onclick=deleteBookFromLibrary(this)>Delete</button>`;
 
     cell3.setAttribute('style', 'text-align: center');
@@ -65,4 +65,20 @@ function deleteLibrary () {
         table.deleteRow(i);
     }
     myLibrary = [];
+}
+
+function toggleStatus (id) {
+    let index = id.parentNode.parentNode.rowIndex;
+    let readStatus = myLibrary[index - 1].readStatus;
+    console.log(index);
+    if (readStatus === 'Read') {
+        myLibrary[index - 1].readStatus = 'Unread';
+        id.innerHTML = 'Unread';
+    }
+    else {
+        myLibrary[index - 1].readStatus = 'Read';
+        id.innerHTML = 'Read';
+    }
+    console.log(myLibrary);
+
 }
