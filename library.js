@@ -25,7 +25,6 @@ function Book(title, author, pages, readStatus) {
 
 function addBookToLibrary() {
     myLibrary.push(new Book(`${title.value}`, `${author.value}`, pages.value, `${readStatus.value}`));
-    console.log(myLibrary);
 
     let table = document.getElementById('list');
     let row = table.insertRow(table.length);
@@ -55,12 +54,10 @@ function deleteBookFromLibrary(id) {
 
     let table = id.parentNode.parentNode.parentNode;
     let row = id.parentNode.parentNode.rowIndex;
-    console.log(row);
     table.deleteRow(row);
 
     myLibrary.splice(row-1, 1);
     myLibrary.forEach(e => e.id = myLibrary.indexOf(e));
-    console.log(myLibrary);
 }
 
 function deleteLibrary () {
@@ -75,12 +72,7 @@ function deleteLibrary () {
     readBooks = 0;
     bookTotal = 0;
 
-    let read = document.getElementById('booksRead');
-    let unread = document.getElementById('booksUnread');
-    let total = document.getElementById('booksTotal');
-    read.innerHTML = `Books Read: ${readBooks}`;
-    unread.innerHTML = `Books Unread: ${unreadBooks}`;
-    total.innerHTML = `Books Total: ${bookTotal}`;
+    updateTracking();
     return;
 }
 
@@ -96,8 +88,6 @@ function toggleStatus (id) {
         myLibrary[index - 1].readStatus = 'Read';
         id.innerHTML = 'Read';
     }
-    console.log(myLibrary);
-
 }
 
 function tracking (status, erase = undefined) {
@@ -121,6 +111,11 @@ function tracking (status, erase = undefined) {
             bookTotal++;
         }
     }
+    updateTracking();
+    return;
+}
+
+function updateTracking () {
     let read = document.getElementById('booksRead');
     let unread = document.getElementById('booksUnread');
     let total = document.getElementById('booksTotal');
