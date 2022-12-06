@@ -45,9 +45,14 @@ function addBookToLibrary() {
     cell4.setAttribute('style', 'text-align: center');
     cell5.setAttribute('style', 'text-align: center');
 
+    tracking(readStatus.value);
 }
 
 function deleteBookFromLibrary(id) {
+    let index = id.parentNode.parentNode.rowIndex;
+    let readStatus = myLibrary[index - 1].readStatus;
+    tracking(readStatus, true);
+
     let table = id.parentNode.parentNode.parentNode;
     let row = id.parentNode.parentNode.rowIndex;
     console.log(row);
@@ -65,6 +70,18 @@ function deleteLibrary () {
         table.deleteRow(i);
     }
     myLibrary = [];
+
+    unreadBooks = 0;
+    readBooks = 0;
+    bookTotal = 0;
+
+    let read = document.getElementById('booksRead');
+    let unread = document.getElementById('booksUnread');
+    let total = document.getElementById('booksTotal');
+    read.innerHTML = `Books Read: ${readBooks}`;
+    unread.innerHTML = `Books Unread: ${unreadBooks}`;
+    total.innerHTML = `Books Total: ${bookTotal}`;
+    return;
 }
 
 function toggleStatus (id) {
@@ -81,4 +98,34 @@ function toggleStatus (id) {
     }
     console.log(myLibrary);
 
+}
+
+function tracking (status, erase = undefined) {
+    if (erase) {
+        if (status === 'Read') {
+            readBooks--;
+            bookTotal--;
+        }
+        else {
+            unreadBooks--;
+            bookTotal--;
+        }
+    }
+    else {
+        if (status === 'Read') {
+            readBooks++;
+            bookTotal++;
+        }
+        else {
+            unreadBooks++;
+            bookTotal++;
+        }
+    }
+    let read = document.getElementById('booksRead');
+    let unread = document.getElementById('booksUnread');
+    let total = document.getElementById('booksTotal');
+    read.innerHTML = `Books Read: ${readBooks}`;
+    unread.innerHTML = `Books Unread: ${unreadBooks}`;
+    total.innerHTML = `Books Total: ${bookTotal}`;
+    return;
 }
