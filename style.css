@@ -73,12 +73,52 @@ table, th, td {
     border-collapse: collapse;
 }
 
-th, td {
-    padding: 20px;
-}
 
 input[type="submit"], button {
     appearance: none;
     padding: 5px 20px;
     border-radius: 10px;
+}
+
+.Read {
+    background-color: rgb(53, 204, 53);
+    border: 1px solid rgb(53, 204, 53);
+}
+
+.Unread {
+    background-color: rgb(223, 37, 37);
+    border: 1px solid rgb(223, 37, 37);
+}
+
+.cell1 {
+    width: 275px;
+    height: 50px;
+    padding: 10px;
+}
+
+.cell2 {
+    width: 275px;
+    height: 50px;
+    padding: 10px;
+}
+
+.cell3 {
+    min-width: 150px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+.cell4 {
+    min-width: 150px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+.cell5 {
+    min-width: 150px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
 }

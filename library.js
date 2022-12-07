@@ -39,10 +39,18 @@ function addBookToLibrary() {
     cell3.innerHTML = `${pages.value}`;
     cell4.innerHTML = `<button onclick=toggleStatus(this)>${readStatus.value}</button>`;
     cell5.innerHTML = `<button onclick=deleteBookFromLibrary(this)>Delete</button>`;
+    
+    cell1.classList.add('cell1');
+    cell2.classList.add('cell2');
+    cell3.classList.add('cell3');
+    cell4.classList.add('cell4');
+    cell5.classList.add('cell5');
 
-    cell3.setAttribute('style', 'text-align: center');
-    cell4.setAttribute('style', 'text-align: center');
-    cell5.setAttribute('style', 'text-align: center');
+    let child4 = cell4.children[0];
+    child4.classList.add(`${readStatus.value}`);
+
+    let child5 = cell5.children[0];
+    child5.classList.add('Unread');
 
     tracking(readStatus.value);
 }
@@ -85,12 +93,16 @@ function toggleStatus (id) {
         id.innerHTML = 'Unread';
         unreadBooks++;
         readBooks--;
+        id.classList.remove('Read');
+        id.classList.add('Unread');
     }
     else {
         myLibrary[index - 1].readStatus = 'Read';
         id.innerHTML = 'Read';
         unreadBooks--;
         readBooks++;
+        id.classList.remove('Unread')
+        id.classList.add('Read');
     }
     updateTracking();
 }
