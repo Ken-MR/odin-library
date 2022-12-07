@@ -40,6 +40,18 @@ form {
 
 }
 
+label {
+    padding-right: 10px;
+}
+
+input {
+    appearance: none;
+}
+
+input:focus {
+    border: lightblue solid;
+}
+
 
 
 

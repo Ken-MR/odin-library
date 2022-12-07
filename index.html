@@ -9,30 +9,30 @@
     <title>Library</title>
 </head>
 <body>
-    <div class="header"><h1>Library</h1></div>
+    <div class="header"><h1>Personal Library</h1></div>
     <div class="entry-form">
         <form onSubmit="event.preventDefault() & addBookToLibrary()">
             <div class="data">
-                <label for="title">Title</label>
+                <label for="title">Title: </label>
                 <input type="text" id="title" name="title" required>                
             </div>
             <div class="data">
-                <label for="author">Author</label>
+                <label for="author">Author: </label>
                 <input type="text" id="author" name="author" required>
             </div>
             <div class="data">
-                <label for="pages">Pages</label>
+                <label for="pages">Pages: </label>
                 <input type="number" id="pages" name="pages" min="1" required>
             </div>
             <div class="data">
-                <label for="readStatus">Status</label>
+                <label for="readStatus">Status: </label>
                 <select name="readStatus" id="readStatus" required>
                     <option value="Read">Read</option>
                     <option value="Unread">Unread</option>
                 </select>
             </div>
             <div class="data">
-                <input type="submit" id="submit" name="submit" value="Submit">
+                <input type="submit" id="submit" name="submit" value="Submit" class="Read">
             </div>
             <div class="data"></div>
         </form>
